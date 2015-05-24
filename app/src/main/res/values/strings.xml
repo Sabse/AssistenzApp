@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">Ersthelfer Assistenz-APP</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="notruf">NOTRUF</string>
     <string name="action_settings">Settings</string>
+
+    <string name="responseless_activity_header">Nicht erweckbar</string>
+    <string name="overview_activity_header">Leitsymptome</string>
+
+    <string name="hello_world">Hello World!</string>
+    <string name="first">First</string>
+    <string name="last">Last</string>
 </resources>

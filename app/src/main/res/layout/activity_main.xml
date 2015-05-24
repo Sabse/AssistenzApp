@@ -1,11 +1,95 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <ImageButton
+        android:id="@+id/responseless_button"
+        android:layout_width="450px"
+        android:layout_height="450px"
+        android:src="@drawable/ic_responseless"
+        android:background="@android:color/transparent"
+        android:onClick="startResponselessActivity"
+        android:scaleType="fitCenter"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="121dp" />
+
+    <ImageButton
+        android:id="@+id/injury_button"
+        android:layout_width="672px"
+        android:layout_height="290px"
+        android:src="@drawable/ic_injury"
+        android:background="@android:color/transparent"
+        android:onClick="startOverviewActivity"
+        android:scaleType="fitCenter"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:tag="injuryButton"/>
+
+    <ImageButton
+        android:id="@+id/stomach_button"
+        android:layout_width="290px"
+        android:layout_height="672px"
+        android:src="@drawable/ic_stomache"
+        android:background="@android:color/transparent"
+        android:onClick="startOverviewActivity"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="85dp"
+        android:layout_marginLeft="240dp"
+        android:tag="stomachButton"/>
+
+    <ImageButton
+        android:id="@+id/head_button"
+        android:layout_width="290px"
+        android:layout_height="672px"
+        android:src="@drawable/ic_head"
+        android:background="@android:color/transparent"
+        android:onClick="startOverviewActivity"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="85dp"
+        android:layout_marginRight="240dp"
+        android:tag="headButton"/>
+
+    <ImageButton
+        android:id="@+id/chest_button"
+        android:layout_width="672px"
+        android:layout_height="290px"
+        android:src="@drawable/ic_chest"
+        android:background="@android:color/transparent"
+        android:onClick="startOverviewActivity"
+        android:scaleType="fitCenter"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="256dp"
+        android:tag="chestButton"/>
+
+    <!-- Emergency Call -->
+    <LinearLayout
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:id="@+id/linearLayout">
+
+        <ImageView
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_phone" />
+
+        <TextView
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notruf"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+    </LinearLayout>
 
 </RelativeLayout>

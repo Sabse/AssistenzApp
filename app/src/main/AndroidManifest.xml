@@ -7,14 +7,28 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
+
+
+
+
         <activity
-            android:name=".MainActivity"
+            android:name="com.uni_r.sabrina.assistapp.main.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.uni_r.sabrina.assistapp.responseless.ResponselessActivity"
+            android:label="@string/responseless_activity_header">
+
+        </activity>
+        <activity
+            android:name="com.uni_r.sabrina.assistapp.overview.OverviewActivity"
+            android:label="@string/overview_activity_header">
+
         </activity>
     </application>
 
