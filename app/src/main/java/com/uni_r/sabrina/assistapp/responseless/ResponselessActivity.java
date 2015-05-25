@@ -4,6 +4,7 @@ package com.uni_r.sabrina.assistapp.responseless;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import com.uni_r.sabrina.assistapp.R;
 import com.uni_r.sabrina.assistapp.SlidingTabLayout;
@@ -48,6 +49,14 @@ public class ResponselessActivity extends AppCompatActivity {
         // Setting the ViewPager For the SlidingTabsLayout
         tabs.setViewPager(pager);
         pager.setCurrentItem(1,false);
+    }
+
+    public void showActiveFrag(View v){
+        pager.setCurrentItem(0,false);
+    }
+
+    public void showInactiveFrag(View v){
+        pager.setCurrentItem(2,false);
     }
 }
 

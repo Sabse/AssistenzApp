@@ -1,14 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Atmung prüfen!"
-        android:id="@+id/breath_check"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:text="@string/breath_check_fragment_text"
+        android:id="@+id/breath_check" />
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/ueberstrecken_picture"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:src="@drawable/pic_ueberstrecken"
+        android:layout_below="@id/breath_check"/>
+
+    <TextView
+        android:id="@+id/stretch_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/breath_check_stretch_text"
+        android:layout_alignBottom="@+id/ueberstrecken_picture"
+        android:layout_toRightOf="@+id/ueberstrecken_picture"
+        android:layout_toEndOf="@+id/ueberstrecken_picture" />
+
+   <TextView
+       android:id="@+id/mouth_text"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textAppearance="?android:attr/textAppearanceMedium"
+       android:text="@string/breath_check_mouth_text"
+       android:layout_below="@+id/ueberstrecken_picture"
+       android:layout_toRightOf="@+id/ueberstrecken_picture"
+       android:layout_toEndOf="@+id/ueberstrecken_picture" />
+
+    <ImageView
+        android:id="@+id/breath_check_picture"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:src="@drawable/pic_atem_kontrolle"
+        android:layout_below="@+id/mouth_text" />
+
+    <TextView
+        android:id="@+id/breath_check_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/breath_check_check_text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_alignTop="@+id/breath_check_picture"
+        android:layout_toRightOf="@+id/breath_check_picture"
+        android:layout_toEndOf="@+id/breath_check_picture" />
+
+    <ImageView
+        android:id="@+id/left_button"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:src="@drawable/ic_left_button"
+        android:onClick="showActiveFrag"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/breath_active_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/breath_check_active_text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/left_button"
+        android:layout_toEndOf="@+id/left_button" />
+
+    <ImageView
+        android:id="@+id/right_button"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:onClick="showInactiveFrag"
+        android:src="@drawable/ic_right_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/breath_check_text"
+        android:layout_alignEnd="@+id/breath_check_text" />
+
+    <TextView
+        android:id="@+id/breath_inactive_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/breath_check_inactive_text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/right_button"
+        android:layout_toStartOf="@+id/right_button" />
+
+</RelativeLayout>

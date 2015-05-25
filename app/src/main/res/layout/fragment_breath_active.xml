@@ -1,14 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Atmung aktiv!"
-        android:id="@+id/breath_active"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:text="@string/breath_active_fragment_text"
+        android:id="@+id/breath_active" />
 
-</LinearLayout>
+    <ImageView
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:src="@drawable/seitenlage_1"
+        android:layout_below="@+id/breath_active"
+        android:id="@+id/stable_side_position_1_picture" />
+
+    <TextView
+        android:id="@+id/stable_side_position_1_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/breath_active_stable_side_position_1_text"
+        android:layout_alignBottom="@+id/stable_side_position_1_picture"
+        android:layout_toRightOf="@+id/stable_side_position_1_picture"
+        android:layout_toEndOf="@+id/stable_side_position_1_picture" />
+
+    <ImageView
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:src="@drawable/seitenlage_2"
+        android:layout_below="@+id/stable_side_position_1_picture"
+        android:id="@+id/stable_side_position_2_picture" />
+
+    <TextView
+        android:id="@+id/stable_side_position_2_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/breath_active_stable_side_position_2_text"
+        android:layout_alignBottom="@+id/stable_side_position_2_picture"
+        android:layout_toRightOf="@+id/stable_side_position_2_picture"
+        android:layout_toEndOf="@+id/stable_side_position_2_picture" />
+
+    <ImageView
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:src="@drawable/seitenlage_3"
+        android:layout_below="@+id/stable_side_position_2_picture"
+        android:id="@+id/stable_side_position_3_picture" />
+
+    <TextView
+        android:id="@+id/stable_side_position_3_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/breath_active_stable_side_position_3_text"
+        android:layout_alignBottom="@+id/stable_side_position_3_picture"
+        android:layout_toRightOf="@+id/stable_side_position_3_picture"
+        android:layout_toEndOf="@+id/stable_side_position_3_picture" />
+
+    <ImageView
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:src="@drawable/seitenlage_4"
+        android:layout_below="@+id/stable_side_position_3_picture"
+        android:id="@+id/stable_side_position_4_picture" />
+
+    <TextView
+        android:id="@+id/stable_side_position_4_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/breath_active_stable_side_position_4_text"
+        android:layout_alignBottom="@+id/stable_side_position_4_picture"
+        android:layout_toRightOf="@+id/stable_side_position_4_picture"
+        android:layout_toEndOf="@+id/stable_side_position_4_picture" />
+
+    <!-- Emergency Call -->
+    <LinearLayout
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:id="@+id/linearLayout">
+
+        <ImageView
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_phone" />
+
+        <TextView
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notruf"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+</RelativeLayout>

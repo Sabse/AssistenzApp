@@ -2,12 +2,25 @@
     <string name="app_name">Ersthelfer Assistenz-APP</string>
 
     <string name="notruf">NOTRUF</string>
-    <string name="action_settings">Settings</string>
 
     <string name="responseless_activity_header">Nicht erweckbar</string>
+    <string name="breath_check_fragment_text">Keine Reaktion auf Ansprechen und leichtes Rütteln an den Schultern:</string>
+    <string name="breath_check_stretch_text">Kopf überstrecken</string>
+    <string name="breath_check_mouth_text">Falls nötigt Mundraum freiräumen:\nKinn nach unten und Wangenschleimhaut zwischen die Kiefer drücken, anschließend Fremdkörper entfernen</string>
+    <string name="breath_check_check_text">Durch Hören und Fühlen Atmung prüfen</string>
+    <string name="breath_check_active_text">Atmung\naktiv</string>
+    <string name="breath_check_inactive_text">Atmung\ninaktiv</string>
+    <string name="breath_active_fragment_text">Führen sie die Stabile Seitenlage durch:</string>
+    <string name="breath_active_stable_side_position_1_text">Winkeln sie einen Arm an</string>
+    <string name="breath_active_stable_side_position_2_text">Anderen Arm anwinkeln, sodass die Hand auf der Wange liegt</string>
+    <string name="breath_active_stable_side_position_3_text">Bein derselben Seite anwinkeln und zu sich ziehen</string>
+    <string name="breath_active_stable_side_position_4_text">Abschließend Kopf überstrecken und regelmäßig Atmung prüfen.</string>
+    <string name="breath_inactive_emergency_hint">Rufen sie unbedingt den Notarzt</string>
+    <string name="breath_inactive_fragment_text">Führen sie die Wiederbelebungsmaßnahmen durch.\nFalls möglich wechseln sie sich mit jemanden ab.\nFalls vorhanden nutzen sie einen Defibrillator.</string>
+    <string name="breath_inactive_push_hint">30x drücken \n(Klicken um Counter + Ton zu starten)</string>
+    <string name="breath_inactive_breath_hint">2x beatmen \nKopf überstrecken, Nase verschließen und Mund zu Mund beatmen.\n Wahlweise auch umgekehrt</string>
+
     <string name="overview_activity_header">Leitsymptome</string>
 
-    <string name="hello_world">Hello World!</string>
-    <string name="first">First</string>
-    <string name="last">Last</string>
+
 </resources>
