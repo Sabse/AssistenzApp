@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 
 import com.uni_r.sabrina.assistapp.R;
 import com.uni_r.sabrina.assistapp.SlidingTabLayout;
@@ -53,6 +55,62 @@ public class OverviewActivity extends AppCompatActivity{
         // Setting the ViewPager For the SlidingTabsLayout
         tabs.setViewPager(pager);
         pager.setCurrentItem(fragmentValue);
+
+
+    }
+
+    public void expandTitle1(View v){
+        TextView content = (TextView) findViewById(R.id.injury_title_1_content);
+        content.setVisibility( content.isShown()
+
+                ? View.GONE
+
+                : View.VISIBLE );
+    }
+
+    public void expandTitle2(View v){
+        TextView content = (TextView) findViewById(R.id.injury_title_2_content);
+        content.setVisibility( content.isShown()
+
+                ? View.GONE
+
+                : View.VISIBLE );
+    }
+
+    public void expandTitle3(View v){
+        TextView content = (TextView) findViewById(R.id.injury_title_3_content);
+        content.setVisibility( content.isShown()
+
+                ? View.GONE
+
+                : View.VISIBLE );
+    }
+
+    public void expandTitle4(View v){
+        TextView content = (TextView) findViewById(R.id.injury_title_4_content);
+        content.setVisibility( content.isShown()
+
+                ? View.GONE
+
+                : View.VISIBLE );
+    }
+
+    public void expandTitle5(View v){
+        TextView content = (TextView) findViewById(R.id.injury_title_5_content);
+        content.setVisibility( content.isShown()
+
+                ? View.GONE
+
+                : View.VISIBLE );
+    }
+
+    public void expandTitle6(View v){
+        TextView content = (TextView) findViewById(R.id.injury_title_6_content);
+        content.setVisibility( content.isShown()
+
+                ? View.GONE
+
+                : View.VISIBLE );
     }
 
 }

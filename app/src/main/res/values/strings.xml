@@ -20,6 +20,34 @@
     <string name="breath_inactive_push_hint">30x drücken \n(Klicken um Counter + Ton zu starten)</string>
     <string name="breath_inactive_breath_hint">2x beatmen \nKopf überstrecken, Nase verschließen und Mund zu Mund beatmen.\n Wahlweise auch umgekehrt</string>
 
+    <string name="injury_fragment_text">Informationen zum Thema Verletzungen:</string>
+    <string name="injury_title_1">Geringe Blutung</string>
+    <string name="injury_title_2">Starke Blutung</string>
+    <string name="injury_title_3">Fremdkörper</string>
+    <string name="injury_title_4">Verbrennung/Verätzung/Erfrierung</string>
+    <string name="injury_title_5">Brüche</string>
+    <string name="injury_title_6">Abgetrennte Körperteile</string>
+
+    <string name="head_fragment_text">Informationen zu Kopfschmerzen und -verletzungen:</string>
+    <string name="head_title_1">Verletzung</string>
+    <string name="head_title_2">Schlaganfall</string>
+    <string name="head_title_3">Sonnenstich/Hitzschlag</string>
+
+    <string name="chest_fragment_text">Informationen zu Brustschmerzen und -verletzungen:</string>
+    <string name="chest_title_1">Verletzung</string>
+    <string name="chest_title_2">Schmerzen in der Brust</string>
+    <string name="chest_title_3">Atmungsprobleme</string>
+    <string name="chest_title_4">Insektenstiche im Mund-Rachen-Raum</string>
+    <string name="chest_title_5">Fremdkörper</string>
+    <string name="chest_title_6">Lagerung</string>
+
+
+    <string name="stomach_fragment_text">Informationen zu Bauchschmerzen und -verletzungen:</string>
+    <string name="stomach_title_1">Verletzung</string>
+    <string name="stomach_title_2">Diabetes</string>
+    <string name="stomach_title_3">Vergiftung</string>
+    <string name="stomach_title_4">Lagerung</string>
+
     <string name="overview_activity_header">Leitsymptome</string>
 
 

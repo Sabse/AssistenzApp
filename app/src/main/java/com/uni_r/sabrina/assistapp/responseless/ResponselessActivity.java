@@ -18,7 +18,7 @@ public class ResponselessActivity extends AppCompatActivity {
     ViewPager pager;
     ViewPagerAdapter adapter;
     SlidingTabLayout tabs;
-    String Titles[]={"Atmung \naktiv", "Atmung \nprüfen", "Atmung \ninaktiv"};
+    String Titles[]={"Atmung \naktiv", "Atmung \npruefen", "Atmung \ninaktiv"};
     int Numboftabs =3;
 
 
