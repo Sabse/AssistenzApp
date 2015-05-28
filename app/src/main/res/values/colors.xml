@@ -3,5 +3,6 @@
     <item name="red" type="color">#820000</item>
     <item name="white" type="color">#FFFFFF</item>
     <item name="light_red" type="color">#972D2D</item>
+    <item name="alert_red" type="color">#CE0000</item>
 
 </resources>

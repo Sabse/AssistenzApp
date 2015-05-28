@@ -23,6 +23,8 @@ public class OverviewActivity extends AppCompatActivity{
     int Numboftabs =4;
     int fragmentValue;
 
+    TextView content;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,58 +61,73 @@ public class OverviewActivity extends AppCompatActivity{
 
     }
 
-    public void expandTitle1(View v){
-        TextView content = (TextView) findViewById(R.id.injury_title_1_content);
-        content.setVisibility( content.isShown()
+    public void expandTitle(View v){
+        switch (v.getTag().toString()){
 
-                ? View.GONE
+            case "injury1": content = (TextView) findViewById(R.id.injury_title_1_content);
+                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+                break;
+            case "injury2": content = (TextView) findViewById(R.id.injury_title_2_content);
+                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+                break;
+            case "injury3": content = (TextView) findViewById(R.id.injury_title_3_content);
+                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+                break;
+            case "injury4": content = (TextView) findViewById(R.id.injury_title_4_content);
+                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+                break;
+            case "injury5": content = (TextView) findViewById(R.id.injury_title_5_content);
+                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+                break;
+            case "injury6": content = (TextView) findViewById(R.id.injury_title_6_content);
+                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+                break;
 
-                : View.VISIBLE );
-    }
+            case "head1": content = (TextView) findViewById(R.id.head_title_1_content);
+                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+                break;
+            case "head2": content = (TextView) findViewById(R.id.head_title_2_content);
+                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+                break;
+            case "head3": content = (TextView) findViewById(R.id.head_title_3_content);
+                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+                break;
 
-    public void expandTitle2(View v){
-        TextView content = (TextView) findViewById(R.id.injury_title_2_content);
-        content.setVisibility( content.isShown()
+            case "chest1": content = (TextView) findViewById(R.id.chest_title_1_content);
+                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+                break;
+            case "chest2": content = (TextView) findViewById(R.id.chest_title_2_content);
+                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+                break;
+            case "chest3": content = (TextView) findViewById(R.id.chest_title_3_content);
+                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+                break;
+            case "chest4": content = (TextView) findViewById(R.id.chest_title_4_content);
+                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+                break;
+            case "chest5": content = (TextView) findViewById(R.id.chest_title_5_content);
+                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+                break;
+            case "chest6": content = (TextView) findViewById(R.id.chest_title_6_content);
+                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+                break;
 
-                ? View.GONE
+            case "stomach1": content = (TextView) findViewById(R.id.stomach_title_1_content);
+                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+                break;
+            case "stomach2": content = (TextView) findViewById(R.id.stomach_title_2_content);
+                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+                break;
+            case "stomach3": content = (TextView) findViewById(R.id.stomach_title_3_content);
+                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+                break;
+            case "stomach4": content = (TextView) findViewById(R.id.stomach_title_4_content);
+                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+                break;
+            default: break;
 
-                : View.VISIBLE );
-    }
+        }
 
-    public void expandTitle3(View v){
-        TextView content = (TextView) findViewById(R.id.injury_title_3_content);
-        content.setVisibility( content.isShown()
-
-                ? View.GONE
-
-                : View.VISIBLE );
-    }
-
-    public void expandTitle4(View v){
-        TextView content = (TextView) findViewById(R.id.injury_title_4_content);
-        content.setVisibility( content.isShown()
-
-                ? View.GONE
-
-                : View.VISIBLE );
-    }
-
-    public void expandTitle5(View v){
-        TextView content = (TextView) findViewById(R.id.injury_title_5_content);
-        content.setVisibility( content.isShown()
-
-                ? View.GONE
-
-                : View.VISIBLE );
-    }
-
-    public void expandTitle6(View v){
-        TextView content = (TextView) findViewById(R.id.injury_title_6_content);
-        content.setVisibility( content.isShown()
-
-                ? View.GONE
-
-                : View.VISIBLE );
     }
 
 }
