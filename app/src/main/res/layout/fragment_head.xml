@@ -1,56 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:orientation="vertical">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/head_fragment_text"
-        android:id="@+id/head" />
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/head_title_1"
-        style="@style/ListContents"
-        android:tag="head1"
-        android:text="@string/head_title_1"
-        android:onClick="expandTitle"/>
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/head_fragment_text"
+            android:id="@+id/head" />
 
-    <TextView
-        android:id="@+id/head_title_1_content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Pflaster glangt!"
-        />
+        <TextView
+            android:id="@+id/head_title_1"
+            style="@style/ListContents"
+            android:tag="head1"
+            android:text="@string/head_title_1"
+            android:onClick="expandTitle"/>
 
-    <TextView
-        android:id="@+id/head_title_2"
-        style="@style/ListContents"
-        android:tag="head2"
-        android:text="@string/injury_title_2"
-        android:onClick="expandTitle"/>
+        <RelativeLayout
 
-    <TextView
-        android:id="@+id/head_title_2_content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Pflaster glangt!"
-        />
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/head_title_1_content">
 
-    <TextView
-        android:id="@+id/head_title_3"
-        style="@style/ListContents"
-        android:tag="head3"
-        android:text="@string/head_title_3"
-        android:onClick="expandTitle"/>
+            <TextView
+                android:id="@+id/head_text_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/head_title_1_content_text_1"
+                />
 
-    <TextView
-        android:id="@+id/head_title_3_content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Pflaster glangt!"
-        />
-</LinearLayout>
+            <ImageView
+                android:id="@+id/head_image_1"
+                android:layout_width="300px"
+                android:layout_height="300px"
+                android:src="@drawable/pic_kopfverband_1"
+                android:layout_below="@+id/head_text_1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/head_text_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/head_title_1_content_text_2"
+                android:layout_alignTop="@+id/head_image_1"
+                android:layout_toRightOf="@+id/head_image_1"
+                android:layout_toEndOf="@+id/head_image_1" />
+
+            <ImageView
+                android:id="@+id/head_image_2"
+                android:layout_width="300px"
+                android:layout_height="300px"
+                android:src="@drawable/pic_kopfverband_2"
+                android:layout_below="@+id/head_image_1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/head_text_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/head_title_1_content_text_3"
+                android:layout_alignBottom="@+id/head_image_2"
+                android:layout_toRightOf="@+id/head_image_2"
+                android:layout_toEndOf="@+id/head_image_2" />
+
+            <ImageView
+                android:id="@+id/head_image_3"
+                android:layout_width="300px"
+                android:layout_height="300px"
+                android:src="@drawable/pic_kopfverband_3"
+                android:layout_below="@id/head_image_2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/head_text_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/head_title_1_content_text_4"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/head_image_3"
+                android:layout_toEndOf="@+id/head_image_3" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/head_title_2"
+            style="@style/ListContents"
+            android:tag="head2"
+            android:text="@string/head_title_2"
+            android:onClick="expandTitle"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/head_title_2_content">
+
+            <TextView
+                android:id="@+id/head_text_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/head_title_2_content_text_1"
+                />
+
+            <TextView
+                android:id="@+id/head_text_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/head_title_2_content_text_2"
+                android:layout_below="@id/head_text_5"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/head_title_3"
+            style="@style/ListContents"
+            android:tag="head3"
+            android:text="@string/head_title_3"
+            android:onClick="expandTitle"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/head_title_3_content">
+
+            <TextView
+                android:id="@+id/head_text_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/head_title_3_content_text_1"
+                />
+
+            <TextView
+                android:id="@+id/head_text_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/head_title_3_content_text_2"
+                android:layout_below="@id/head_text_7"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

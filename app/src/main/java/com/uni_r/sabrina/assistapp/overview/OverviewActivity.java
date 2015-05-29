@@ -6,10 +6,13 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.uni_r.sabrina.assistapp.R;
 import com.uni_r.sabrina.assistapp.SlidingTabLayout;
+
+import org.apache.http.conn.ConnectionReleaseTrigger;
 
 /**
  * Created by Sabse on 24.05.2015.
@@ -23,7 +26,7 @@ public class OverviewActivity extends AppCompatActivity{
     int Numboftabs =4;
     int fragmentValue;
 
-    TextView content;
+    RelativeLayout contentLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,66 +67,55 @@ public class OverviewActivity extends AppCompatActivity{
     public void expandTitle(View v){
         switch (v.getTag().toString()){
 
-            case "injury1": content = (TextView) findViewById(R.id.injury_title_1_content);
-                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+            case "injury1": contentLayout = (RelativeLayout) findViewById(R.id.injury_title_1_content);
+                contentLayout.setVisibility(contentLayout.isShown() ? View.GONE : View.VISIBLE);
                 break;
-            case "injury2": content = (TextView) findViewById(R.id.injury_title_2_content);
-                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+            case "injury2": contentLayout = (RelativeLayout) findViewById(R.id.injury_title_2_content);
+                contentLayout.setVisibility(contentLayout.isShown() ? View.GONE : View.VISIBLE);
                 break;
-            case "injury3": content = (TextView) findViewById(R.id.injury_title_3_content);
-                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+            case "injury3": contentLayout = (RelativeLayout) findViewById(R.id.injury_title_3_content);
+                contentLayout.setVisibility(contentLayout.isShown() ? View.GONE : View.VISIBLE);
                 break;
-            case "injury4": content = (TextView) findViewById(R.id.injury_title_4_content);
-                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+            case "injury4": contentLayout = (RelativeLayout) findViewById(R.id.injury_title_4_content);
+                contentLayout.setVisibility(contentLayout.isShown() ? View.GONE : View.VISIBLE);
                 break;
-            case "injury5": content = (TextView) findViewById(R.id.injury_title_5_content);
-                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+            case "injury5": contentLayout = (RelativeLayout) findViewById(R.id.injury_title_5_content);
+                contentLayout.setVisibility(contentLayout.isShown() ? View.GONE : View.VISIBLE);
                 break;
-            case "injury6": content = (TextView) findViewById(R.id.injury_title_6_content);
-                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
-                break;
-
-            case "head1": content = (TextView) findViewById(R.id.head_title_1_content);
-                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
-                break;
-            case "head2": content = (TextView) findViewById(R.id.head_title_2_content);
-                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
-                break;
-            case "head3": content = (TextView) findViewById(R.id.head_title_3_content);
-                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+            case "injury6": contentLayout = (RelativeLayout) findViewById(R.id.injury_title_6_content);
+                contentLayout.setVisibility(contentLayout.isShown() ? View.GONE : View.VISIBLE);
                 break;
 
-            case "chest1": content = (TextView) findViewById(R.id.chest_title_1_content);
-                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+            case "head1": contentLayout = (RelativeLayout) findViewById(R.id.head_title_1_content);
+                contentLayout.setVisibility(contentLayout.isShown() ? View.GONE : View.VISIBLE);
                 break;
-            case "chest2": content = (TextView) findViewById(R.id.chest_title_2_content);
-                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+            case "head2": contentLayout = (RelativeLayout) findViewById(R.id.head_title_2_content);
+                contentLayout.setVisibility(contentLayout.isShown() ? View.GONE : View.VISIBLE);
                 break;
-            case "chest3": content = (TextView) findViewById(R.id.chest_title_3_content);
-                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
-                break;
-            case "chest4": content = (TextView) findViewById(R.id.chest_title_4_content);
-                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
-                break;
-            case "chest5": content = (TextView) findViewById(R.id.chest_title_5_content);
-                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
-                break;
-            case "chest6": content = (TextView) findViewById(R.id.chest_title_6_content);
-                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+            case "head3": contentLayout = (RelativeLayout) findViewById(R.id.head_title_3_content);
+                contentLayout.setVisibility(contentLayout.isShown() ? View.GONE : View.VISIBLE);
                 break;
 
-            case "stomach1": content = (TextView) findViewById(R.id.stomach_title_1_content);
-                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+            case "chest1": contentLayout = (RelativeLayout) findViewById(R.id.chest_title_1_content);
+                contentLayout.setVisibility(contentLayout.isShown() ? View.GONE : View.VISIBLE);
                 break;
-            case "stomach2": content = (TextView) findViewById(R.id.stomach_title_2_content);
-                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+            case "chest2": contentLayout = (RelativeLayout) findViewById(R.id.chest_title_2_content);
+                contentLayout.setVisibility(contentLayout.isShown() ? View.GONE : View.VISIBLE);
                 break;
-            case "stomach3": content = (TextView) findViewById(R.id.stomach_title_3_content);
-                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+            case "chest3": contentLayout = (RelativeLayout) findViewById(R.id.chest_title_3_content);
+                contentLayout.setVisibility(contentLayout.isShown() ? View.GONE : View.VISIBLE);
                 break;
-            case "stomach4": content = (TextView) findViewById(R.id.stomach_title_4_content);
-                content.setVisibility(content.isShown() ? View.GONE : View.VISIBLE);
+            case "chest4": contentLayout = (RelativeLayout) findViewById(R.id.chest_title_4_content);
+                contentLayout.setVisibility(contentLayout.isShown() ? View.GONE : View.VISIBLE);
                 break;
+
+            case "stomach1": contentLayout = (RelativeLayout) findViewById(R.id.stomach_title_1_content);
+                contentLayout.setVisibility(contentLayout.isShown() ? View.GONE : View.VISIBLE);
+                break;
+            case "stomach2": contentLayout = (RelativeLayout) findViewById(R.id.stomach_title_2_content);
+                contentLayout.setVisibility(contentLayout.isShown() ? View.GONE : View.VISIBLE);
+                break;
+
             default: break;
 
         }

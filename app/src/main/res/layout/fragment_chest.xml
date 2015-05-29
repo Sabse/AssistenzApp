@@ -1,105 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:orientation="vertical">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/chest_fragment_text"
-        android:id="@+id/chest" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/chest_fragment_text"
+            android:id="@+id/chest" />
 
-    <TextView
-        android:id="@+id/chest_title_1"
-        style="@style/ListContents"
-        android:tag="chest1"
-        android:text="@string/chest_title_1"
-        android:onClick="expandTitle"/>
+        <TextView
+            android:id="@+id/chest_title_1"
+            style="@style/ListContents"
+            android:tag="chest1"
+            android:text="@string/chest_title_1"
+            android:onClick="expandTitle"/>
 
-    <TextView
-        android:id="@+id/chest_title_1_content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Pflaster glangt!"
-        />
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/chest_title_1_content">
 
-    <TextView
-        android:id="@+id/chest_title_2"
-        style="@style/ListContents"
-        android:tag="chest2"
-        android:text="@string/chest_title_2"
-        android:onClick="expandTitle"/>
+            <TextView
+                android:id="@+id/chest_text_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/chest_title_1_content_text_1"
+                />
 
-    <TextView
-        android:id="@+id/chest_title_2_content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Pflaster glangt!"
-        />
-
-    <TextView
-        android:id="@+id/chest_title_3"
-        style="@style/ListContents"
-        android:tag="chest3"
-        android:text="@string/chest_title_3"
-        android:onClick="expandTitle"/>
-
-    <TextView
-        android:id="@+id/chest_title_3_content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Pflaster glangt!"
-        />
-
-    <TextView
-        android:id="@+id/chest_title_4"
-        style="@style/ListContents"
-        android:tag="chest4"
-        android:text="@string/chest_title_4"
-        android:onClick="expandTitle"/>
-
-    <TextView
-        android:id="@+id/chest_title_4_content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Pflaster glangt!"
-        />
-
-    <TextView
-        android:id="@+id/chest_title_5"
-        style="@style/ListContents"
-        android:tag="chest5"
-        android:text="@string/chest_title_5"
-        android:onClick="expandTitle"/>
-
-    <TextView
-        android:id="@+id/chest_title_5_content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Pflaster glangt!"
-        />
-
-    <TextView
-        android:id="@+id/chest_title_6"
-        style="@style/ListContents"
-        android:tag="chest6"
-        android:text="@string/chest_title_6"
-        android:onClick="expandTitle"/>
-
-    <TextView
-        android:id="@+id/chest_title_6_content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Pflaster glangt!"
-        />
+        </RelativeLayout>
 
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/chest_title_2"
+            style="@style/ListContents"
+            android:tag="chest2"
+            android:text="@string/chest_title_2"
+            android:onClick="expandTitle"/>
 
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/chest_title_2_content">
+
+            <TextView
+                android:id="@+id/chest_text_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/chest_title_2_content_text_1"
+                />
+
+            <TextView
+                android:id="@+id/chest_text_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/chest_title_2_content_text_2"
+                android:layout_below="@+id/chest_text_2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/chest_title_3"
+            style="@style/ListContents"
+            android:tag="chest3"
+            android:text="@string/chest_title_3"
+            android:onClick="expandTitle"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/chest_title_3_content">
+
+            <TextView
+                android:id="@+id/chest_text_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/chest_title_3_content_text_1"
+                />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/chest_title_4"
+            style="@style/ListContents"
+            android:tag="chest4"
+            android:text="@string/chest_title_4"
+            android:onClick="expandTitle"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/chest_title_4_content">
+
+            <TextView
+                android:id="@+id/chest_text_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/chest_title_4_content_text_1"
+                />
+
+            <ImageView
+                android:layout_width="300px"
+                android:layout_height="300px"
+                android:src="@drawable/pic_heimlich_handgriff"
+                android:layout_below="@id/chest_text_5"/>
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+</ScrollView>
