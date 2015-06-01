@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">Ersthelfer Assistenz-APP</string>
 
+    <string name="popup_title">Absichern und Eigenschutz beachten!</string>
+    <string name="popup_safety_1">Sichern sie zuerst sich und ihre Umgebung</string>
+    <string name="popup_safety_2">Tragen sie zur Behandlung Einmal-Handschuhe</string>
+    <string name="popup_safety_3">Ruhe bewahren</string>
+    <string name="popup_button">Ich bin ruhig - Los gehts!</string>
+
+
+
     <string name="notruf">NOTRUF</string>
 
     <string name="responseless_activity_header">Nicht erweckbar</string>
