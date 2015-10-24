@@ -74,14 +74,15 @@
         android:background="@color/red"
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
-        android:clickable="true"
+        android:onClick="emergencyCall"
         android:id="@+id/linearLayout">
 
         <ImageView
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_phone" />
+            android:src="@drawable/ic_phone"
+            android:onClick="emergencyCall"/>
 
         <TextView
             style="?android:attr/buttonBarButtonStyle"
@@ -89,7 +90,8 @@
             android:layout_height="wrap_content"
             android:text="@string/notruf"
             android:textColor="@color/white"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            android:onClick="emergencyCall"/>
     </LinearLayout>
 
 </RelativeLayout>

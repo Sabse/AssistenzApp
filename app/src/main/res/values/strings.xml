@@ -10,6 +10,8 @@
 
 
     <string name="notruf">NOTRUF</string>
+    <string name="call">Call</string>
+    <string name="denie">Leave</string>
 
     <string name="responseless_activity_header">Nicht erweckbar</string>
     <string name="breath_check_fragment_text">Keine Reaktion auf Ansprechen und leichtes Rütteln an den Schultern:</string>
