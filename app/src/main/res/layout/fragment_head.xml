@@ -8,7 +8,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="9pt"
+            android:padding="20dp"
             android:text="@string/head_fragment_text"
             android:id="@+id/head" />
 
@@ -29,14 +30,16 @@
                 android:id="@+id/head_text_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="9pt"
+                android:padding="20dp"
                 android:text="@string/head_title_1_content_text_1"
                 />
 
             <ImageView
                 android:id="@+id/head_image_1"
-                android:layout_width="300px"
-                android:layout_height="300px"
+                android:layout_width="550px"
+                android:layout_height="400px"
+                android:padding="5dp"
                 android:src="@drawable/pic_kopfverband_1"
                 android:layout_below="@+id/head_text_1"
                 android:layout_alignParentLeft="true"
@@ -46,7 +49,8 @@
                 android:id="@+id/head_text_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="9pt"
+                android:padding="5dp"
                 android:text="@string/head_title_1_content_text_2"
                 android:layout_alignTop="@+id/head_image_1"
                 android:layout_toRightOf="@+id/head_image_1"
@@ -54,8 +58,9 @@
 
             <ImageView
                 android:id="@+id/head_image_2"
-                android:layout_width="300px"
-                android:layout_height="300px"
+                android:layout_width="550px"
+                android:layout_height="400px"
+                android:padding="5dp"
                 android:src="@drawable/pic_kopfverband_2"
                 android:layout_below="@+id/head_image_1"
                 android:layout_alignParentLeft="true"
@@ -65,16 +70,18 @@
                 android:id="@+id/head_text_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="9pt"
+                android:padding="5dp"
                 android:text="@string/head_title_1_content_text_3"
-                android:layout_alignBottom="@+id/head_image_2"
+                android:layout_below="@id/head_image_1"
                 android:layout_toRightOf="@+id/head_image_2"
                 android:layout_toEndOf="@+id/head_image_2" />
 
             <ImageView
                 android:id="@+id/head_image_3"
-                android:layout_width="300px"
-                android:layout_height="300px"
+                android:layout_width="550px"
+                android:layout_height="400px"
+                android:padding="5dp"
                 android:src="@drawable/pic_kopfverband_3"
                 android:layout_below="@id/head_image_2"
                 android:layout_alignParentLeft="true"
@@ -84,9 +91,10 @@
                 android:id="@+id/head_text_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="9pt"
+                android:padding="5dp"
                 android:text="@string/head_title_1_content_text_4"
-                android:layout_alignParentBottom="true"
+                android:layout_below="@id/head_image_2"
                 android:layout_toRightOf="@+id/head_image_3"
                 android:layout_toEndOf="@+id/head_image_3" />
 
@@ -109,7 +117,8 @@
                 android:id="@+id/head_text_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="9pt"
+                android:padding="5dp"
                 android:text="@string/head_title_2_content_text_1"
                 />
 
@@ -117,7 +126,8 @@
                 android:id="@+id/head_text_6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="9pt"
+                android:padding="5dp"
                 android:text="@string/head_title_2_content_text_2"
                 android:layout_below="@id/head_text_5"
                 android:layout_alignParentLeft="true"
@@ -141,7 +151,8 @@
                 android:id="@+id/head_text_7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="9pt"
+                android:padding="5dp"
                 android:text="@string/head_title_3_content_text_1"
                 />
 
@@ -149,9 +160,21 @@
                 android:id="@+id/head_text_8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="9pt"
+                android:padding="5dp"
+                android:textColor="@color/light_red"
                 android:text="@string/head_title_3_content_text_2"
-                android:layout_below="@id/head_text_7"/>
+                android:layout_below="@id/head_text_7"
+                />
+
+            <TextView
+                android:id="@+id/head_text_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9pt"
+                android:padding="5dp"
+                android:text="@string/head_title_3_content_text_3"
+                android:layout_below="@id/head_text_8"/>
         </RelativeLayout>
 
     </LinearLayout>

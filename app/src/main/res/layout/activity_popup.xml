@@ -4,54 +4,66 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
         android:text="@string/popup_title"
-        android:textSize="15pt"/>
+        android:textSize="15pt" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingTop="25dp">
         <ImageView
             android:layout_width="500px"
             android:layout_height="500px"
-            android:src="@drawable/pic_absichern"/>
-
-
+            android:paddingLeft="20dp"
+            android:src="@drawable/pic_absichern"
+            android:id="@+id/pic_absichern"/>
 
         <ImageView
             android:layout_width="500px"
-            android:layout_height="500px"
+            android:layout_height="300px"
+            android:paddingLeft="20dp"
+            android:scaleType="fitStart"
             android:src="@drawable/pic_handschuhe"
-            android:layout_alignParentRight="true"/>
+            android:layout_below="@id/pic_absichern"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/safety_text1"
+            android:text="@string/popup_safety_1"
+            android:textSize="10pt"
+            android:layout_toRightOf="@id/pic_absichern"
+            android:paddingTop="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/safety_text2"
+            android:text="@string/popup_safety_2"
+            android:textSize="10pt"
+            android:layout_toRightOf="@id/pic_absichern"
+            android:layout_below="@id/safety_text1"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/popup_safety_3"
+            android:textSize="10pt"
+            android:layout_toRightOf="@id/pic_absichern"
+            android:layout_below="@id/safety_text2"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"/>
     </RelativeLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/popup_safety_1"
-        android:textSize="10pt"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/popup_safety_2"
-        android:textSize="10pt"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/popup_safety_3"
-        android:textSize="10pt"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -59,6 +71,9 @@
         android:background="@color/red"
         android:text="@string/popup_button"
         android:textColor="@color/white"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginTop="30dp"
         android:layout_gravity="center_horizontal"
         android:onClick="startApp"/>
 

@@ -1,19 +1,28 @@
 package com.uni_r.sabrina.assistapp.main;
 
+import android.app.ActionBar;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Point;
+import android.graphics.Typeface;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationManager;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Display;
 import android.view.Menu;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.uni_r.sabrina.assistapp.overview.OverviewActivity;
 import com.uni_r.sabrina.assistapp.R;
@@ -25,47 +34,75 @@ import java.util.List;
 import java.util.Locale;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends EmergencyCallActivity {
 
-    String locationProvider;
-    String personalLocation = "";
-    LocationManager locationManager;
-    LocationListener locationListener;
-    Location location;
-    Geocoder gcd;
-
-    List<Address> addresses = new ArrayList<Address>();
-
+    RelativeLayout relativeLayout;
+    ImageView responslessButton;
+    ImageView injuryButton;
+    ImageView stomachButton;
+    ImageView chestButton;
+    ImageView headButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        locationListener = new LocationListener();
-        locationProvider  = LocationManager.GPS_PROVIDER;
-        gcd = new Geocoder(this, Locale.getDefault());
 
+        setupButtons();
+    }
 
-        locationManager =  (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        if(!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)){
-            //falls GPS nicht enabled hier anbieten es anzuschalten
-        }
-        else{
-        }
-        locationManager.requestLocationUpdates(locationManager.GPS_PROVIDER, 5000, 10, locationListener);
-        location = locationManager.getLastKnownLocation(locationProvider);
-        try {
-            addresses = gcd.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
-            if(addresses != null && addresses.size() > 0){
-                Address address = addresses.get(0);
-                personalLocation += address.getAddressLine(0) + " in " + address.getAddressLine(1);
-            }
+    private void setupButtons() {
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        int sb = size.x;
+        int sh = size.y;
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        int responslessButtonSize = (int) (sb*0.45f);
+        int responslessButtonMarginLeft =(int) (sb*0.274);
+        int responslessButtonMarginTop =(int) (sh*0.233);
 
+        int sideButtonWidth = (int) (sb*0.639f);
+        int sideButtonHeight = (int) (sideButtonWidth*0.435f);
+        int sideButtonHorizontalMarginLeft = (int) (sb*0.18);
+        int sideButtonVerticalMarginTop = (int) (sh*0.175);
 
+        int injuryButtonMarginTop = (int) (sh*0.085);
+        int chestButtonMarginTop = (int) (sh*0.487);
+        int stomachButtonMarginLeft = (int) (sb*0.695);
+        int headButtonMarginLeft = (int) (sb*0.025);
+
+        relativeLayout = (RelativeLayout) findViewById(R.id.main_layout);
+
+        //Setup responsless button
+        responslessButton = (ImageView) findViewById(R.id.responseless_button);
+        RelativeLayout.LayoutParams responslessButtonLayoutParams = new RelativeLayout.LayoutParams(responslessButtonSize, responslessButtonSize);
+        responslessButtonLayoutParams.setMargins(responslessButtonMarginLeft, responslessButtonMarginTop, 0, 0);
+        responslessButton.setLayoutParams(responslessButtonLayoutParams);
+
+        //Setup injury button
+        injuryButton = (ImageView) findViewById(R.id.injury_button);
+        RelativeLayout.LayoutParams injuryButtonLayoutParams = new RelativeLayout.LayoutParams(sideButtonWidth, sideButtonHeight);
+        injuryButtonLayoutParams.setMargins(sideButtonHorizontalMarginLeft, injuryButtonMarginTop, 0, 0);
+        injuryButton.setLayoutParams(injuryButtonLayoutParams);
+
+        //Setup stomach button
+        stomachButton = (ImageView) findViewById(R.id.stomach_button);
+        RelativeLayout.LayoutParams stomachButtonLayoutParams = new RelativeLayout.LayoutParams(sideButtonHeight, sideButtonWidth);
+        stomachButtonLayoutParams.setMargins(stomachButtonMarginLeft, sideButtonVerticalMarginTop, 0, 0);
+        stomachButton.setLayoutParams(stomachButtonLayoutParams);
+
+        //Setup chest button
+        chestButton = (ImageView) findViewById(R.id.chest_button);
+        RelativeLayout.LayoutParams chestButtonLayoutParams = new RelativeLayout.LayoutParams(sideButtonWidth, sideButtonHeight);
+        chestButtonLayoutParams.setMargins(sideButtonHorizontalMarginLeft, chestButtonMarginTop, 0, 0);
+        chestButton.setLayoutParams(chestButtonLayoutParams);
+
+        //Setup head button
+        headButton = (ImageView) findViewById(R.id.head_button);
+        RelativeLayout.LayoutParams headButtonLayoutParams = new RelativeLayout.LayoutParams(sideButtonHeight, sideButtonWidth);
+        headButtonLayoutParams.setMargins(headButtonMarginLeft, sideButtonVerticalMarginTop, 0, 0);
+        headButton.setLayoutParams(headButtonLayoutParams);
     }
 
     public void startResponselessActivity(View v){
@@ -90,28 +127,6 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(intent);
     }
-
-    public void emergencyCall(View v){
-        new AlertDialog.Builder(this)
-                .setTitle("Jetzt Notruf wählen?")
-                .setMessage("Sie befinden sich hier: " + personalLocation)
-                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + "112"));
-                        startActivity(intent);
-
-                    }
-                })
-                .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        // do nothing
-                    }
-                })
-                .setIcon(android.R.drawable.ic_dialog_alert)
-                .show();
-    }
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

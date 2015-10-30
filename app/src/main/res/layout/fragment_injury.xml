@@ -9,40 +9,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="9pt"
+            android:padding="20dp"
             android:text="@string/injury_fragment_text"
             android:id="@+id/injury" />
-
-        <TextView
-            android:id="@+id/injury_title_1"
-            style="@style/ListContents"
-            android:tag="injury1"
-            android:text="@string/injury_title_1"
-            android:onClick="expandTitle"/>
-
-        <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/injury_title_1_content"
-            >
-
-            <ImageView
-                android:id="@+id/injury_pic_1"
-                android:layout_width="300px"
-                android:layout_height="300px"
-                android:src="@drawable/pic_pflaster"/>
-
-            <TextView
-                android:id="@+id/injury_text_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/injury_title_1_content_text_1"
-                android:layout_centerVertical="true"
-                android:layout_toRightOf="@+id/injury_pic_1"
-                android:layout_toEndOf="@+id/injury_pic_1" />
-        </RelativeLayout>
-
 
         <TextView
             android:id="@+id/injury_title_2"
@@ -60,13 +30,16 @@
                 android:id="@+id/injury_pic_2"
                 android:layout_width="300px"
                 android:layout_height="300px"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
                 android:src="@drawable/pic_rahmenverband"/>
 
             <TextView
                 android:id="@+id/injury_text_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="9pt"
+                android:padding="5dp"
                 android:text="@string/injury_title_2_content_text_1"
                 android:layout_alignParentTop="true"
                 android:layout_toRightOf="@+id/injury_pic_2"
@@ -76,6 +49,8 @@
                 android:id="@+id/injury_pic_3"
                 android:layout_width="300px"
                 android:layout_height="300px"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
                 android:src="@drawable/pic_druckverband"
                 android:layout_below="@+id/injury_text_2"
                 android:layout_alignParentLeft="true"
@@ -85,7 +60,8 @@
                 android:id="@+id/injury_text_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="9pt"
+                android:padding="5dp"
                 android:text="@string/injury_title_2_content_text_2"
                 android:layout_below="@id/injury_text_2"
                 android:layout_toRightOf="@+id/injury_pic_3"
@@ -109,6 +85,8 @@
                 android:id="@+id/injury_pic_4"
                 android:layout_width="300px"
                 android:layout_height="300px"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
                 android:src="@drawable/pic_fremdkoerper"
                  />
 
@@ -116,9 +94,9 @@
                 android:id="@+id/injury_text_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="9pt"
+                android:padding="5dp"
                 android:text="@string/injury_title_3_content_text_1"
-
                 android:layout_alignParentBottom="true"
                 android:layout_toRightOf="@+id/injury_pic_4"
                 android:layout_toEndOf="@+id/injury_pic_4" />
@@ -137,12 +115,62 @@
             android:layout_height="wrap_content"
             android:id="@+id/injury_title_4_content">
 
+            <ImageView
+                android:id="@+id/injury_pic_5"
+                android:layout_width="300px"
+                android:layout_height="300px"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/ic_fire"/>
+
             <TextView
                 android:id="@+id/injury_text_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="9pt"
+                android:padding="5dp"
                 android:text="@string/injury_title_4_content_text_1"
+                android:layout_toRightOf="@+id/injury_pic_5"
+                />
+
+            <ImageView
+                android:id="@+id/injury_pic_6"
+                android:layout_width="300px"
+                android:layout_height="300px"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/ic_poison"
+                android:layout_below="@id/injury_text_5"/>
+
+            <TextView
+                android:id="@+id/injury_text_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9pt"
+                android:padding="5dp"
+                android:text="@string/injury_title_4_content_text_2"
+                android:layout_toRightOf="@+id/injury_pic_6"
+                android:layout_below="@id/injury_text_5"
+                />
+
+            <ImageView
+                android:id="@+id/injury_pic_7"
+                android:layout_width="300px"
+                android:layout_height="300px"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/ic_ice"
+                android:layout_below="@id/injury_text_6"/>
+
+            <TextView
+                android:id="@+id/injury_text_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9pt"
+                android:padding="5dp"
+                android:text="@string/injury_title_4_content_text_3"
+                android:layout_toRightOf="@+id/injury_pic_7"
+                android:layout_below="@id/injury_text_6"
                 />
         </RelativeLayout>
 
@@ -159,20 +187,32 @@
             android:id="@+id/injury_title_5_content">
 
             <TextView
-                android:id="@+id/injury_text_6"
+                android:id="@+id/injury_text_8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="9pt"
+                android:padding="5dp"
                 android:text="@string/injury_title_5_content_text_1"
                 />
 
-            <ImageView
-                android:id="@+id/injury_pic_5"
-                android:layout_width="300px"
-                android:layout_height="300px"
-                android:src="@drawable/pic_dreieckstuch_bruch"
+            <TextView
+                android:id="@+id/injury_text_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9pt"
+                android:padding="5dp"
+                android:text="@string/injury_title_5_content_text_2"
+                android:layout_below="@id/injury_text_8"
+                />
 
-                android:layout_below="@id/injury_text_6" />
+            <ImageView
+                android:id="@+id/injury_pic_8"
+                android:layout_width="900px"
+                android:layout_height="700px"
+                android:src="@drawable/pic_dreieckstuch_bruch"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/injury_text_9" />
 
         </RelativeLayout>
 
@@ -189,13 +229,128 @@
             android:layout_height="wrap_content"
             android:id="@+id/injury_title_6_content">
 
+            <ImageView
+                android:id="@+id/injury_pic_9"
+                android:layout_width="1000px"
+                android:layout_height="400px"
+                android:src="@drawable/pic_schocklage"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp" />
+
             <TextView
-                android:id="@+id/injury_text_7"
+                android:id="@+id/injury_text_10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="9pt"
+                android:padding="5dp"
                 android:text="@string/injury_title_6_content_text_1"
+                android:layout_below="@id/injury_pic_9"/>
+
+            <TextView
+                android:id="@+id/injury_text_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9pt"
+                android:padding="5dp"
+                android:text="@string/injury_title_6_content_text_2"
+                android:layout_below="@id/injury_text_10"
                 />
+            <TextView
+                android:id="@+id/injury_text_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9pt"
+                android:padding="5dp"
+                android:text="@string/injury_title_6_content_text_3"
+                android:layout_below="@id/injury_text_11"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/injury_title_7"
+            style="@style/ListContents"
+            android:tag="injury7"
+            android:text="@string/head_title_1"
+            android:onClick="expandTitle"/>
+
+        <RelativeLayout
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/injury_title_7_content">
+
+            <TextView
+                android:id="@+id/injury_head_text_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9pt"
+                android:padding="20dp"
+                android:text="@string/head_title_1_content_text_1"
+                />
+
+            <ImageView
+                android:id="@+id/injury_head_image_1"
+                android:layout_width="550px"
+                android:layout_height="400px"
+                android:padding="5dp"
+                android:src="@drawable/pic_kopfverband_1"
+                android:layout_below="@+id/injury_head_text_1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/injury_head_text_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9pt"
+                android:padding="5dp"
+                android:text="@string/head_title_1_content_text_2"
+                android:layout_alignTop="@+id/injury_head_image_1"
+                android:layout_toRightOf="@+id/injury_head_image_1"
+                android:layout_toEndOf="@+id/injury_head_image_1" />
+
+            <ImageView
+                android:id="@+id/injury_head_image_2"
+                android:layout_width="550px"
+                android:layout_height="400px"
+                android:padding="5dp"
+                android:src="@drawable/pic_kopfverband_2"
+                android:layout_below="@+id/injury_head_image_1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/injury_head_text_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9pt"
+                android:padding="5dp"
+                android:text="@string/head_title_1_content_text_3"
+                android:layout_below="@id/injury_head_image_1"
+                android:layout_toRightOf="@+id/injury_head_image_2"
+                android:layout_toEndOf="@+id/injury_head_image_2" />
+
+            <ImageView
+                android:id="@+id/injury_head_image_3"
+                android:layout_width="550px"
+                android:layout_height="400px"
+                android:padding="5dp"
+                android:src="@drawable/pic_kopfverband_3"
+                android:layout_below="@id/injury_head_image_2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/injury_head_text_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9pt"
+                android:padding="5dp"
+                android:text="@string/head_title_1_content_text_4"
+                android:layout_below="@id/injury_head_image_2"
+                android:layout_toRightOf="@+id/injury_head_image_3"
+                android:layout_toEndOf="@+id/injury_head_image_3" />
+
         </RelativeLayout>
 
 

@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
-
-
+    <RelativeLayout
+        android:layout_width="match_parent" android:layout_height="match_parent">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="10pt"
         android:text="@string/breath_inactive_emergency_hint"
         android:id="@+id/breath_inactive"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:padding="20dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="9pt"
         android:text="@string/breath_inactive_fragment_text"
         android:id="@+id/breath_inactive_text"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_below="@+id/breath_inactive"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true" />
 
     <ImageView
         android:layout_width="300px"
@@ -29,68 +31,37 @@
         android:id="@+id/play_button"
         android:clickable="true"
         android:onClick="playSound"
-        android:layout_above="@+id/breath_advice_picture"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/breath_inactive_text"
+        android:layout_centerHorizontal="true"  />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="9pt"
         android:text="@string/breath_inactive_push_hint"
         android:id="@+id/push_advice"
-        android:layout_toRightOf="@+id/play_button"
-        android:layout_above="@+id/breath_advice_picture"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@id/play_button"
+        android:layout_centerHorizontal="true" />
 
     <ImageView
-        android:layout_width="300px"
+        android:layout_width="400px"
         android:layout_height="300px"
         android:src="@drawable/pic_beatmung"
         android:id="@+id/breath_advice_picture"
-        android:layout_marginBottom="59dp"
-        android:layout_above="@+id/linearLayout"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/breath_inactive_breath_hint"
-        android:id="@+id/breath_advice"
-        android:layout_alignBottom="@+id/breath_advice_picture"
-        android:layout_toRightOf="@+id/breath_advice_picture"
-        android:layout_toEndOf="@+id/breath_advice_picture" />
-
-    <!-- Emergency Call -->
-    <LinearLayout
-        style="?android:attr/buttonBarButtonStyle"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/red"
-        android:orientation="horizontal"
-        android:clickable="true"
-        android:id="@+id/linearLayout"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
-        <ImageView
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_phone" />
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/push_advice" />
 
         <TextView
-            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/notruf"
-            android:textColor="@color/white"
-            android:textSize="20dp" />
-    </LinearLayout>
-
+            android:textSize="9pt"
+            android:padding="20dp"
+            android:text="@string/breath_inactive_breath_hint"
+            android:id="@+id/breath_advice"
+            android:layout_below="@id/push_advice"
+            android:layout_toRightOf="@+id/breath_advice_picture" />
 
 </RelativeLayout>
+    </ScrollView>

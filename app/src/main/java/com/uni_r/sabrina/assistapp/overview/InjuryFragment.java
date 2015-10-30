@@ -21,19 +21,18 @@ import org.w3c.dom.Text;
  */
 public class InjuryFragment extends Fragment{
 
-    RelativeLayout content1;
+
     RelativeLayout content2;
     RelativeLayout content3;
     RelativeLayout content4;
     RelativeLayout content5;
     RelativeLayout content6;
+    RelativeLayout content7;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v =inflater.inflate(R.layout.fragment_injury,container,false);
 
-        content1 = (RelativeLayout) v.findViewById(R.id.injury_title_1_content);
-        content1.setVisibility(View.GONE);
 
         content2 = (RelativeLayout) v.findViewById(R.id.injury_title_2_content);
         content2.setVisibility(View.GONE);
@@ -49,6 +48,9 @@ public class InjuryFragment extends Fragment{
 
         content6 = (RelativeLayout) v.findViewById(R.id.injury_title_6_content);
         content6.setVisibility(View.GONE);
+
+        content7 = (RelativeLayout) v.findViewById(R.id.injury_title_7_content);
+        content7.setVisibility(View.GONE);
 
         return v;
 

@@ -8,7 +8,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="9pt"
+            android:padding="20dp"
             android:text="@string/chest_fragment_text"
             android:id="@+id/chest" />
 
@@ -28,8 +29,19 @@
                 android:id="@+id/chest_text_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="9pt"
+                android:padding="5dp"
                 android:text="@string/chest_title_1_content_text_1"
+                />
+
+            <TextView
+                android:id="@+id/chest_text_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9pt"
+                android:padding="5dp"
+                android:text="@string/chest_title_1_content_text_2"
+                android:layout_below="@id/chest_text_1"
                 />
 
         </RelativeLayout>
@@ -48,20 +60,22 @@
             android:id="@+id/chest_title_2_content">
 
             <TextView
-                android:id="@+id/chest_text_2"
+                android:id="@+id/chest_text_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="9pt"
+                android:padding="5dp"
                 android:text="@string/chest_title_2_content_text_1"
                 />
 
             <TextView
-                android:id="@+id/chest_text_3"
+                android:id="@+id/chest_text_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="9pt"
+                android:padding="5dp"
                 android:text="@string/chest_title_2_content_text_2"
-                android:layout_below="@+id/chest_text_2"
+                android:layout_below="@+id/chest_text_3"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true" />
         </RelativeLayout>
@@ -80,10 +94,11 @@
             android:id="@+id/chest_title_3_content">
 
             <TextView
-                android:id="@+id/chest_text_4"
+                android:id="@+id/chest_text_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="9pt"
+                android:padding="5dp"
                 android:text="@string/chest_title_3_content_text_1"
                 />
         </RelativeLayout>
@@ -101,19 +116,26 @@
             android:layout_height="wrap_content"
             android:id="@+id/chest_title_4_content">
 
-            <TextView
-                android:id="@+id/chest_text_5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/chest_title_4_content_text_1"
+            <ImageView
+                android:id="@+id/chest_pic_heimlich"
+                android:layout_width="400px"
+                android:layout_height="500px"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/pic_heimlich_handgriff"
                 />
 
-            <ImageView
-                android:layout_width="300px"
-                android:layout_height="300px"
-                android:src="@drawable/pic_heimlich_handgriff"
-                android:layout_below="@id/chest_text_5"/>
+            <TextView
+                android:id="@+id/chest_text_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9pt"
+                android:padding="5dp"
+                android:text="@string/chest_title_4_content_text_1"
+                android:layout_toRightOf="@id/chest_pic_heimlich"
+                />
+
+
         </RelativeLayout>
 
 

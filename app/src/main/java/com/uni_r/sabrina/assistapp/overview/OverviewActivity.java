@@ -11,13 +11,15 @@ import android.widget.TextView;
 
 import com.uni_r.sabrina.assistapp.R;
 import com.uni_r.sabrina.assistapp.SlidingTabLayout;
+import com.uni_r.sabrina.assistapp.main.EmergencyCallActivity;
+import com.uni_r.sabrina.assistapp.responseless.ResponselessActivity;
 
 import org.apache.http.conn.ConnectionReleaseTrigger;
 
 /**
  * Created by Sabse on 24.05.2015.
  */
-public class OverviewActivity extends AppCompatActivity{
+public class OverviewActivity extends EmergencyCallActivity{
 
     ViewPager pager;
     OverviewViewPagerAdapter adapter;
@@ -64,12 +66,15 @@ public class OverviewActivity extends AppCompatActivity{
 
     }
 
+    public void startResponselessActivity(View v){
+        Intent intent = new Intent(OverviewActivity.this, ResponselessActivity.class);
+        startActivity(intent);
+    }
+
     public void expandTitle(View v){
         switch (v.getTag().toString()){
 
-            case "injury1": contentLayout = (RelativeLayout) findViewById(R.id.injury_title_1_content);
-                contentLayout.setVisibility(contentLayout.isShown() ? View.GONE : View.VISIBLE);
-                break;
+
             case "injury2": contentLayout = (RelativeLayout) findViewById(R.id.injury_title_2_content);
                 contentLayout.setVisibility(contentLayout.isShown() ? View.GONE : View.VISIBLE);
                 break;
@@ -83,6 +88,9 @@ public class OverviewActivity extends AppCompatActivity{
                 contentLayout.setVisibility(contentLayout.isShown() ? View.GONE : View.VISIBLE);
                 break;
             case "injury6": contentLayout = (RelativeLayout) findViewById(R.id.injury_title_6_content);
+                contentLayout.setVisibility(contentLayout.isShown() ? View.GONE : View.VISIBLE);
+                break;
+            case "injury7": contentLayout = (RelativeLayout) findViewById(R.id.injury_title_7_content);
                 contentLayout.setVisibility(contentLayout.isShown() ? View.GONE : View.VISIBLE);
                 break;
 

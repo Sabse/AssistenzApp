@@ -4,6 +4,16 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/red</item>
+        <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+        <item name="android:buttonStyle">@style/RobotoButtonStyle</item>
+    </style>
+
+    <style name="RobotoTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="RobotoButtonStyle" parent="android:Widget.Holo.Button">
+        <item name="android:fontFamily">sans-serif-light</item>
     </style>
 
     <style name="ListContents">
@@ -12,8 +22,10 @@
         <item name="android:layout_height">50dp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">9pt</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">5dp</item>
 
-        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
 
 
     </style>
