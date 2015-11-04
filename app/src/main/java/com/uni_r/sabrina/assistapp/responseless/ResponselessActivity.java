@@ -14,6 +14,8 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.SoundEffectConstants;
 import android.view.View;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.uni_r.sabrina.assistapp.R;
@@ -30,6 +32,7 @@ public class ResponselessActivity extends EmergencyCallActivity {
 
     ViewPager pager;
     ViewPagerAdapter adapter;
+    ImageView playButton;
     SlidingTabLayout tabs;
     String Titles[]={"Atmung \naktiv", "Atmung \nprüfen", "Atmung \ninaktiv"};
     int Numboftabs =3;
@@ -78,15 +81,16 @@ public class ResponselessActivity extends EmergencyCallActivity {
 
     public void playSound(View v){
 
+        playButton = (ImageView) findViewById(R.id.play_button);
 
         if(mp.isPlaying()){
-            System.out.println("aus");
+            playButton.setImageResource(R.drawable.ic_play_button);
             mp.pause();
 
         } else {
             mp.setLooping(true);
             try {
-                System.out.println("an");
+                playButton.setImageResource(R.drawable.ic_pause_button);
                 mp.start();
             } catch (IllegalStateException e) {
                 e.printStackTrace();

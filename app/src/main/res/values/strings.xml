@@ -2,8 +2,8 @@
     <string name="app_name">Ersthelfer Assistenz-APP</string>
 
     <string name="popup_title">Absichern und Eigenschutz beachten!</string>
-    <string name="popup_safety_1">Sichern sie zuerst sich und ihre Umgebung</string>
-    <string name="popup_safety_2">Tragen sie zur Behandlung Einmal-Handschuhe</string>
+    <string name="popup_safety_1">Sich selbst und die Umgebung sichern</string>
+    <string name="popup_safety_2">Zur Behandlung Einmal-Handschuhe tragen</string>
     <string name="popup_safety_3">Ruhe bewahren</string>
     <string name="popup_button">Ich bin ruhig - Los gehts!</string>
 
@@ -25,15 +25,15 @@
     <string name="breath_active_stable_side_position_2_text">Handrücken an die Wange legen</string>
     <string name="breath_active_stable_side_position_3_text">Bein anwinkeln und zu sich ziehen</string>
     <string name="breath_active_stable_side_position_4_text">Abschließend Kopf überstrecken und regelmäßig Atmung prüfen.</string>
-    <string name="breath_inactive_emergency_hint">Rufen sie spätestens jetzt den Notarzt</string>
-    <string name="breath_inactive_fragment_text">Führen sie die Wiederbelebungsmaßnahmen durch.\nFalls möglich wechseln sie sich mit jemanden ab.\nFalls vorhanden nutzen sie einen Defibrillator.</string>
+    <string name="breath_inactive_emergency_hint">Spätestens jetzt Notruf tätigen!</string>
+    <string name="breath_inactive_fragment_text">Führen sie die Wiederbelebungsmaßnahmen durch.\nFalls möglich wechseln sie sich mit jemanden ab.\nFalls vorhanden lassen sie sich einen Defibrillator bringen.</string>
     <string name="breath_inactive_push_hint">(Klicken um Ton zu starten)</string>
-    <string name="breath_inactive_breath_hint">Freiwillig:\nnach 30x drücken 2x beatmen\nKopf überstrecken, Nase verschließen und Mund zu Mund beatmen.\nGeht auch umgekehrt</string>
+    <string name="breath_inactive_breath_hint">Nach 30x drücken 2x beatmen:\nKopf überstrecken, Nase verschließen und Mund zu Mund beatmen.\nGeht auch umgekehrt</string>
 
     <string name="injury_fragment_text">Nicht in die Wunde fassen.\nNicht desinfizieren.\nGroße Fremdkörper nicht entfernen.</string>
     <string name="injury_title_2">Starke Blutung</string>
-    <string name="injury_title_2_content_text_1">Rahmenverband:\nBedecken sie die Wunde mit einer Kompresse.\nMit Heftpflastern oder Dreieckstuch fixieren.</string>
-    <string name="injury_title_2_content_text_2">Druckverband:\nWunde mit einer Kompresse bedecken.\nFlexibles Druckpolster (z.B. ungeöffnetes Verbandspäcken) anbringen.\nDruckpolster mit Verband oder Dreieckstuch fixieren.</string>
+    <string name="injury_title_2_content_text_1">Rahmenverband:\nBedecken sie die Wunde mit einer Kompresse.\nMit Heftpflastern oder Dreiecktuch fixieren.</string>
+    <string name="injury_title_2_content_text_2">Druckverband:\nWunde mit einer Kompresse bedecken.\nFlexibles Druckpolster (z.B. ungeöffnetes Verbandpäckchen) anbringen.\nDruckpolster mit Verband oder Dreiecktuch fixieren.</string>
     <string name="injury_title_3">Fremdkörper fixieren</string>
     <string name="injury_title_3_content_text_1">Fremdkörper (z.B. mit ungeöffnetem Verbandpäckchen) stabilisieren.\nMit Verband oder Heftpflaster fixieren.</string>
     <string name="injury_title_4">Verbrennung/Verätzung/Erfrierung</string>
@@ -45,8 +45,8 @@
     <string name="injury_title_5_content_text_2">Ruhigstellung eines Armes:</string>
     <string name="injury_title_6">Abgetrennte Körperteile</string>
     <string name="injury_title_6_content_text_1">Falls nicht anders erwünscht wird die Schocklage empfohlen.</string>
-    <string name="injury_title_6_content_text_2">Abgetrennte Gliedmaßen:\nkeimarm aufbewahren (z.B. in Einmalhandschuh) und vorsichtig kühlen (z.B. in weiterem mit Leitungswasser gefülltem Handschuh)</string>
-    <string name="injury_title_6_content_text_3">Abgebrochene Zähne:\nZahn nicht an der Wurzel berühren und bei Verschmutzung abspülen.\nAnschließend keimarm, feucht und kühl sicherstellen.</string>
+    <string name="injury_title_6_content_text_2">Abgetrennte Gliedmaßen:\nkeimarm aufbewahren und vorsichtig kühlen.</string>
+    <string name="injury_title_6_content_text_3">Abgebrochene Zähne:\nZahn nicht an der Wurzel berühren und keimarm, feucht und kühl sicherstellen.</string>
 
     <string name="head_fragment_text">Falls nicht anders erwünscht: Oberkörper hochlagern, um eine Druckbelastung des Gehirns durch erhöhte Blutzufuhr zu vermeiden.</string>
     <string name="head_title_1">Kopfverband</string>
@@ -55,24 +55,24 @@
     <string name="head_title_1_content_text_3">Enden im Nacken überkreuzen und vor der Stirn verknoten.</string>
     <string name="head_title_1_content_text_4">Abschließend Ende im Nacken einschlagen.</string>
     <string name="head_title_2">Schlaganfall</string>
-    <string name="head_title_2_content_text_1">Symptome:\nKopfschmerzen\nSeh- und Sprachstörungen\nSchwindel- und Übelkeitsgefühle evtl. mit Erbrechen\nHalbseitige Lähmung (Gesicht, Arm)</string>
+    <string name="head_title_2_content_text_1">Symptome:\nKopfschmerzen\nSeh- und Sprachstörungen\nSchwindel- und Übelkeitsgefühle evtl. mit Erbrechen\nHalbseitige Lähmung (Gesicht, Arm)\nSchluckschwierigkeiten</string>
     <string name="head_title_2_content_text_2">Gelähmte Körperteile polstern und fixieren.\nNotarzt rufen!</string>
     <string name="head_title_3">Sonnenstich/Hitzschlag</string>
-    <string name="head_title_3_content_text_1">Symptome:\nKopf-/Nackenschmerzen\nSchwindel/Übelkeit evtl. mit Erbrechen</string>
-    <string name="head_title_3_content_text_2">Ist nicht nur der Kopf, sondern gesamter Körper rot, handelt es sich um einen Hitzschlag</string>
+    <string name="head_title_3_content_text_1">Symptome:\nKopf-/Nackenschmerzen\nSchwindel/Übelkeit evtl. mit Erbrechen\nSchweißausbruch</string>
+    <string name="head_title_3_content_text_2">Ist nicht nur der Kopf, sondern gesamter Körper rot und der Betroffene schwitzt nicht, handelt es sich um einen Hitzschlag</string>
     <string name="head_title_3_content_text_3">Behandlung:\nDer Betroffene muss umgehend in den Schatten gebracht werden.\nBei Sonnenstich Kopf kühlen.\nBei Hitzschlag mit dem Kühlen an Händen und Füßen beginnen und zum Körperkern vorarbeiten.</string>
 
     <string name="chest_fragment_text">Wenn nicht anders gewünscht den Oberkörper hoch lagern.\nFalls notwendig beengende Kleidung entfernen.\nFrische Luft zuführen.</string>
     <string name="chest_title_1">Schmerzen in der Brust</string>
-    <string name="chest_title_1_content_text_1">Symptome:\nSchmerzen hinter dem Brustbein, die bis in den linken Arm, Hals, Bauch oder Rücken strahlen\Klingen nach einiger Schonzeit nicht ab</string>
-    <string name="chest_title_1_content_text_2">Behandlung:\nKönnte sich um einen Herzinfarkt handeln.\nRufen sie einen Notarzt und behalten sie den Betroffenen im Auge.</string>
+    <string name="chest_title_1_content_text_1">Symptome:\nSchmerzen hinter dem Brustbein, die bis in den linken Arm, Hals, Bauch oder Rücken strahlen\nKlingen nach einiger Zeit nicht ab</string>
+    <string name="chest_title_1_content_text_2">Behandlung:\nRufen sie einen Notarzt und behalten sie den Betroffenen im Auge.</string>
     <string name="chest_title_2">Atmungsprobleme</string>
     <string name="chest_title_2_content_text_1">Hyperventilation:\nSchnelle Atmung bei gleichzeitigem Beklagen über Luftnot.\n-> Falls möglich in eine leere Tüte atmen lassen.</string>
     <string name="chest_title_2_content_text_2">Asthma:\nRöchelnde/rasselnde/pfeifende Atmung.\n-> Falls vorhanden Spray reichen (nicht selbst drücken!).\n-> Zur Flötenatmung auffordern (Lippen beim Ausatmen spitzen).</string>
     <string name="chest_title_3">Insektenstiche im Mund-Rachen-Raum</string>
     <string name="chest_title_3_content_text_1">Wenn möglich von innen und außen kühlen.\nEis oder kaltes Wasser zum gurgeln geben.\nNutzen sie Kühlkompressen um von außen zu kühlen</string>
     <string name="chest_title_4">Fremdkörper</string>
-    <string name="chest_title_4_content_text_1">Zum Husten auffordern.\nBei Misserfolg 5x zwischen die Schulterblätter schlagen.\nWenn alles nichts hilft: Heimlich-Handgriff (Abbildung links).</string>
+    <string name="chest_title_4_content_text_1">Zum Husten auffordern.\nBei Misserfolg 5x zwischen die Schulterblätter schlagen.\nAls wirklich allerletzter Ausweg: Heimlich-Handgriff (Abbildung links).</string>
 
     <string name="stomach_fragment_text">Lagerung nach Wunsch.\nFalls nötig Hilfestellung beim Erbrechen leisten.\nBei offenen Verletzungen am besten mit Verbandtuch arbeiten</string>
     <string name="stomach_title_1">Diabetes</string>
@@ -80,7 +80,7 @@
     <string name="stomach_title_1_content_text_2">Behandlunng:\nTraubenzucker anbieten</string>
     <string name="stomach_title_2">Vergiftung</string>
     <string name="stomach_title_2_content_text_1">Merke: Alles kann zu einer Vergiftung führen!</string>
-    <string name="stomach_title_2_content_text_2">Giftreste sicher stellen und Rettungsdienst übergeben.\nRegelmäßige Kontrolle des Zustands des Patienten.</string>
+    <string name="stomach_title_2_content_text_2">Giftreste sicher stellen und Rettungsdienst übergeben.\nRegelmäßige Kontrolle des Zustands des Patienten.\nNicht zum übergeben auffordern.</string>
 
     <string name="overview_activity_header">Leitsymptome</string>
 

@@ -209,7 +209,7 @@
                 android:id="@+id/injury_pic_8"
                 android:layout_width="900px"
                 android:layout_height="700px"
-                android:src="@drawable/pic_dreieckstuch_bruch"
+                android:src="@drawable/pic_dreiecktuch_bruch"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_below="@id/injury_text_9" />
