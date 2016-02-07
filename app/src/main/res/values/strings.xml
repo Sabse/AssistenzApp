@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Ersthelfer Assistenz-APP</string>
+    <string name="app_name">Notfall-Assistenz-App</string>
 
     <string name="popup_title">Absichern und Eigenschutz beachten!</string>
     <string name="popup_safety_1">Sich selbst und die Umgebung sichern</string>
