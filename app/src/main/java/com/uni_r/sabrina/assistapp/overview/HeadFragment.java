@@ -13,6 +13,7 @@ import com.uni_r.sabrina.assistapp.R;
 
 /**
  * Created by Sabse on 24.05.2015.
+ * This class manages the visibility of topic related content within the expandable list
  */
 public class HeadFragment extends Fragment {
 

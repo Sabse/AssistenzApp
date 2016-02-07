@@ -7,12 +7,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
-
 import com.uni_r.sabrina.assistapp.R;
 
 /**
  * Created by Sabse on 24.05.2015.
+ * This class manages the visibility of topic related content within the expandable list
  */
 public class ChestFragment extends Fragment {
 
@@ -20,7 +19,6 @@ public class ChestFragment extends Fragment {
     RelativeLayout content2;
     RelativeLayout content3;
     RelativeLayout content4;
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

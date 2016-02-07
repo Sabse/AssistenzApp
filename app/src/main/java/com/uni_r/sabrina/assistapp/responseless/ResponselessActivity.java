@@ -1,32 +1,19 @@
 package com.uni_r.sabrina.assistapp.responseless;
 
-
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.res.AssetFileDescriptor;
-import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.view.SoundEffectConstants;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.TextView;
-
 import com.uni_r.sabrina.assistapp.R;
 import com.uni_r.sabrina.assistapp.SlidingTabLayout;
 import com.uni_r.sabrina.assistapp.main.EmergencyCallActivity;
-import com.uni_r.sabrina.assistapp.responseless.ViewPagerAdapter;
-
-import java.io.IOException;
 
 /**
  * Created by Sabse on 23.05.2015.
+ * This class manages the fragments about breath check, no breath and breath active.
+ * It is therefore needed to help the user to run through the right actions.
+ * Emergency Call is embedded.
  */
 public class ResponselessActivity extends EmergencyCallActivity {
 
@@ -38,7 +25,6 @@ public class ResponselessActivity extends EmergencyCallActivity {
     int Numboftabs =3;
     MediaPlayer mp;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,15 +33,15 @@ public class ResponselessActivity extends EmergencyCallActivity {
         // Creating The ViewPagerAdapter and Passing Fragment Manager, Titles fot the Tabs and Number Of Tabs.
         adapter =  new ViewPagerAdapter(getSupportFragmentManager(),Titles,Numboftabs);
 
-        // Assigning ViewPager View and setting the adapter
+        // Assigning ViewPager View and setting the adapter.
         pager = (ViewPager) findViewById(R.id.responseless_pager);
         pager.setAdapter(adapter);
 
         // Assiging the Sliding Tab Layout View
         tabs = (SlidingTabLayout) findViewById(R.id.tabs);
-        tabs.setDistributeEvenly(true); // To make the Tabs Fixed set this true, This makes the tabs Space Evenly in Available width
+        tabs.setDistributeEvenly(true); // To make the Tabs Fixed set this true, This makes the tabs Space Evenly in Available width.
 
-        // Setting Custom Color for the Scroll bar indicator of the Tab View
+        // Setting Custom Color for the Scroll bar indicator of the Tab View.
         tabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
             @Override
             public int getIndicatorColor(int position) {
@@ -63,31 +49,36 @@ public class ResponselessActivity extends EmergencyCallActivity {
             }
         });
 
-        // Setting the ViewPager For the SlidingTabsLayout
+        // Setting the ViewPager For the SlidingTabsLayout.
         tabs.setViewPager(pager);
         pager.setCurrentItem(1, false);
 
+        //Start media player.
         mp = MediaPlayer.create(this, R.raw.snare2);
-
     }
 
     public void showActiveFrag(View v){
+        // Switch to BreathActiveFragment.
         pager.setCurrentItem(0,false);
     }
 
     public void showInactiveFrag(View v){
+        // Switch to BreathInactiveFragment.
         pager.setCurrentItem(2,false);
     }
 
-    public void playSound(View v){
 
+    public void playSound(View v){
+        // Called when button vor playing audio touched.
         playButton = (ImageView) findViewById(R.id.play_button);
 
+        // If media player is playing while pushed, change button image back to play image and pause audio.
         if(mp.isPlaying()){
             playButton.setImageResource(R.drawable.ic_play_button);
             mp.pause();
 
         } else {
+            // Loop audio, change button image to pause image and play audio.
             mp.setLooping(true);
             try {
                 playButton.setImageResource(R.drawable.ic_pause_button);
@@ -96,9 +87,7 @@ public class ResponselessActivity extends EmergencyCallActivity {
                 e.printStackTrace();
             }
         }
-
     }
-
 }
 
 

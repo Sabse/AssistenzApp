@@ -6,11 +6,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.uni_r.sabrina.assistapp.R;
 
 /**
  * Created by Sabse on 24.05.2015.
+ * This class contains the fragment to gain informations about not responding but breathing persons
  */
 public class BreathActiveFragment extends Fragment {
 

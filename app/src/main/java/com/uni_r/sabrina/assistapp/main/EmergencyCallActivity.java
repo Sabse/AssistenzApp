@@ -11,14 +11,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import com.uni_r.sabrina.assistapp.R;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +21,9 @@ import java.util.Locale;
 
 /**
  * Created by Sabse on 30.10.2015.
+ * This Class handles the logic behind the emergency call button (gps localisation, alert content, linking to telephone app).
+ * It is set up as footer and can be embedded into any activity.
+ * If so the activity will show the emergeny button located on the bottom.
  */
 public abstract class EmergencyCallActivity extends AppCompatActivity {
 
@@ -45,15 +43,18 @@ public abstract class EmergencyCallActivity extends AppCompatActivity {
         locationListener = new LocationListener();
         locationProvider  = LocationManager.GPS_PROVIDER;
         gcd = new Geocoder(this, Locale.getDefault());
-
         locationManager =  (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+
+        //check status of GPS Provider
         if(!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)){
-            //falls GPS nicht enabled hier anbieten es anzuschalten
+            //in case the GPS provider is disabled, return feedback to user and ask for permission (not implemented!)
         }
         else{
         }
+        //Request for updates and get last known location
         locationManager.requestLocationUpdates(locationManager.GPS_PROVIDER, 5000, 10, locationListener);
         location = locationManager.getLastKnownLocation(locationProvider);
+        //try converting longitude and latitude data to full address
         try {
             if(location != null) {
                 addresses = gcd.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
@@ -68,20 +69,22 @@ public abstract class EmergencyCallActivity extends AppCompatActivity {
         }
     }
 
+    //called if emergency button pressed
     public void emergencyCall(View v){
+        //setup alert dialog
         AlertDialog dialog = new AlertDialog.Builder(this)
                 .setTitle("Jetzt Notruf wählen?")
                 .setMessage("Sie befinden sich hier:\n" + personalLocation)
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
+                        //call phone app and setup number
                         Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + "112"));
                         startActivity(intent);
-
                     }
                 })
                 .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        // do nothing
+                        // do nothing and return to activity
                     }
                 })
                 .setIcon(android.R.drawable.ic_dialog_alert)

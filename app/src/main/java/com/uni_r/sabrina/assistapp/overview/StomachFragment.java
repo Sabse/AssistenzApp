@@ -7,18 +7,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
-
 import com.uni_r.sabrina.assistapp.R;
 
 /**
  * Created by Sabse on 24.05.2015.
+ * This class manages the visibility of topic related content within the expandable list.
  */
 public class StomachFragment extends Fragment{
 
     RelativeLayout content1;
     RelativeLayout content2;
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

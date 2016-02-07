@@ -6,11 +6,11 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 
 /**
  * Created by Sabse on 24.05.2015.
+ * This class is needed to setup fragments correctly.
  */
 public class OverviewViewPagerAdapter extends FragmentStatePagerAdapter {
     CharSequence Titles[]; // This will Store the Titles of the Tabs which are Going to be passed when ViewPagerAdapter is created
     int NumbOfTabs; // Store the number of tabs, this will also be passed when the ViewPagerAdapter is created
-
 
     // Build a Constructor and assign the passed Values to appropriate values in the class
     public OverviewViewPagerAdapter(FragmentManager fm,CharSequence mTitles[], int mNumbOfTabsumb) {
@@ -18,24 +18,23 @@ public class OverviewViewPagerAdapter extends FragmentStatePagerAdapter {
 
         this.Titles = mTitles;
         this.NumbOfTabs = mNumbOfTabsumb;
-
     }
 
-    //This method return the fragment for the every position in the View Pager
+
     @Override
     public Fragment getItem(int position) {
-
-        if(position == 0) // if the position is 0 we are returning the First tab
+        // Return the fragment for every position in the View Pager.
+        if(position == 0)
         {
             InjuryFragment injuryFrag = new InjuryFragment();
             return injuryFrag;
         }
-        else if(position == 1)            // As we are having 2 tabs if the position is now 0 it must be 1 so we are returning second tab
+        else if(position == 1)
         {
             HeadFragment headFrag = new HeadFragment();
             return headFrag;
         }
-        else if(position == 2)            // As we are having 2 tabs if the position is now 0 it must be 1 so we are returning second tab
+        else if(position == 2)
         {
             ChestFragment chestFrag = new ChestFragment();
             return chestFrag;
@@ -47,17 +46,15 @@ public class OverviewViewPagerAdapter extends FragmentStatePagerAdapter {
         }
     }
 
-    // This method return the titles for the Tabs in the Tab Strip
-
     @Override
     public CharSequence getPageTitle(int position) {
+        // Return the titles for the Tabs in the Tab Strip.
         return Titles[position];
     }
 
-    // This method return the Number of tabs for the tabs Strip
-
     @Override
     public int getCount() {
+        // Return the Number of tabs for the tabs Strip.
         return NumbOfTabs;
     }
 }

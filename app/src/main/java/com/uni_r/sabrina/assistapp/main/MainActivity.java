@@ -1,39 +1,22 @@
 package com.uni_r.sabrina.assistapp.main;
 
-import android.app.ActionBar;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Point;
-import android.graphics.Typeface;
-import android.location.Address;
-import android.location.Geocoder;
-import android.location.Location;
-import android.location.LocationManager;
-import android.media.Image;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Display;
 import android.view.Menu;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
-
 import com.uni_r.sabrina.assistapp.overview.OverviewActivity;
 import com.uni_r.sabrina.assistapp.R;
 import com.uni_r.sabrina.assistapp.responseless.ResponselessActivity;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-
-
+/**
+ * This class provides the start screen with 5 buttons and the emergency call footer
+ * It gives a first insight about the apps content to the user and helps to orientate between the different topics
+ */
 public class MainActivity extends EmergencyCallActivity {
 
     RelativeLayout relativeLayout;
@@ -52,21 +35,25 @@ public class MainActivity extends EmergencyCallActivity {
     }
 
     private void setupButtons() {
+        // setup position for buttons in startscreen
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
         int sb = size.x;
         int sh = size.y;
 
+        // setup position for responsless button
         int responslessButtonSize = (int) (sb*0.45f);
         int responslessButtonMarginLeft =(int) (sb*0.274);
         int responslessButtonMarginTop =(int) (sh*0.233);
 
+        // setup position for buttons around the responsless button
         int sideButtonWidth = (int) (sb*0.639f);
         int sideButtonHeight = (int) (sideButtonWidth*0.435f);
-        int sideButtonHorizontalMarginLeft = (int) (sb*0.18);
+        int sideButtonHorizontalMarginLeft = (int) (sb*0.18); //
         int sideButtonVerticalMarginTop = (int) (sh*0.175);
 
+        // setup specific position for buttons around responsless button
         int injuryButtonMarginTop = (int) (sh*0.085);
         int chestButtonMarginTop = (int) (sh*0.487);
         int stomachButtonMarginLeft = (int) (sb*0.695);
@@ -106,11 +93,13 @@ public class MainActivity extends EmergencyCallActivity {
     }
 
     public void startResponselessActivity(View v){
+        // start responsless activity when responsless button touched
         Intent intent = new Intent(MainActivity.this, ResponselessActivity.class);
         startActivity(intent);
     }
 
     public void startOverviewActivity(View v){
+        // start overview activity and show fragment depending to the touched button
         Intent intent = new Intent(MainActivity.this, OverviewActivity.class);
         switch(v.getTag().toString()){
             case "injuryButton": intent.putExtra("ButtonValue", 0);
@@ -134,6 +123,4 @@ public class MainActivity extends EmergencyCallActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
-
-
 }

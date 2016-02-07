@@ -6,6 +6,7 @@
     android:orientation="vertical"
     tools:context="ResponselessActivity">
 
+    <!-- Setup Tabs and View Pager for Fragment layout -->
     <com.uni_r.sabrina.assistapp.SlidingTabLayout
         android:id="@+id/tabs"
         android:layout_width="match_parent"
@@ -19,6 +20,7 @@
         android:layout_weight="1"
         ></android.support.v4.view.ViewPager>
 
+    <!-- Setup Emergency Call as Footer-->
     <include
         android:id="@+id/emergencyButton"
         android:layout_width="wrap_content"

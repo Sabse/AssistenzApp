@@ -1,67 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Enable scrolling-->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
+    <!-- Content of InactiveBreathFragment-->
     <RelativeLayout
         android:layout_width="match_parent" android:layout_height="match_parent">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="10pt"
-        android:text="@string/breath_inactive_emergency_hint"
-        android:id="@+id/breath_inactive"
-        android:padding="20dp"
-        android:gravity="center"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="9pt"
-        android:text="@string/breath_inactive_fragment_text"
-        android:id="@+id/breath_inactive_text"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_below="@+id/breath_inactive"
-        android:layout_centerHorizontal="true" />
-
-    <ImageView
-        android:layout_width="300px"
-        android:layout_height="300px"
-        android:src="@drawable/ic_play_button"
-        android:id="@+id/play_button"
-        android:clickable="true"
-        android:onClick="playSound"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/breath_inactive_text"
-        android:layout_centerHorizontal="true"  />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="9pt"
-        android:text="@string/breath_inactive_push_hint"
-        android:id="@+id/push_advice"
-        android:layout_below="@id/play_button"
-        android:layout_centerHorizontal="true" />
-
-    <ImageView
-        android:layout_width="400px"
-        android:layout_height="300px"
-        android:src="@drawable/pic_beatmung"
-        android:id="@+id/breath_advice_picture"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/push_advice" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10pt"
+            android:text="@string/breath_inactive_emergency_hint"
+            android:id="@+id/breath_inactive"
+            android:padding="20dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="9pt"
-            android:padding="20dp"
-            android:text="@string/breath_inactive_breath_hint"
-            android:id="@+id/breath_advice"
-            android:layout_below="@id/push_advice"
-            android:layout_toRightOf="@+id/breath_advice_picture" />
+            android:text="@string/breath_inactive_fragment_text"
+            android:id="@+id/breath_inactive_text"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/breath_inactive"
+            android:layout_centerHorizontal="true" />
 
-</RelativeLayout>
-    </ScrollView>
+        <!-- Button to activate player-->
+        <ImageView
+            android:layout_width="300px"
+            android:layout_height="300px"
+            android:src="@drawable/ic_play_button"
+            android:id="@+id/play_button"
+            android:clickable="true"
+            android:onClick="playSound"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/breath_inactive_text"
+            android:layout_centerHorizontal="true"  />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="9pt"
+            android:text="@string/breath_inactive_push_hint"
+            android:id="@+id/push_advice"
+            android:layout_below="@id/play_button"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="400px"
+            android:layout_height="300px"
+            android:src="@drawable/pic_beatmung"
+            android:id="@+id/breath_advice_picture"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/push_advice" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9pt"
+                android:padding="20dp"
+                android:text="@string/breath_inactive_breath_hint"
+                android:id="@+id/breath_advice"
+                android:layout_below="@id/push_advice"
+                android:layout_toRightOf="@+id/breath_advice_picture" />
+
+    </RelativeLayout>
+</ScrollView>

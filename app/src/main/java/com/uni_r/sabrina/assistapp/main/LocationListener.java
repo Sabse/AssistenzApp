@@ -1,16 +1,13 @@
 package com.uni_r.sabrina.assistapp.main;
 
-import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
 
-import java.util.Locale;
-
 /**
  * Created by Sabse on 22.09.2015.
+ * This class is called to provide feedback depending on the actual localisation results
  */
 public class LocationListener implements android.location.LocationListener{
-
 
     @Override
     public void onLocationChanged(Location location) {

@@ -1,109 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Setup scrollability-->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
-<RelativeLayout
-    android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="9pt"
-        android:padding="20dp"
-        android:text="@string/breath_active_fragment_text"
-        android:id="@+id/breath_active" />
+    <!-- Content of BreathActiveFragment -->
+    <RelativeLayout
+        android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <ImageView
-        android:layout_width="400px"
-        android:layout_height="300px"
-        android:src="@drawable/seitenlage_1"
-        android:layout_below="@+id/breath_active"
-        android:layout_marginLeft="20dp"
-        android:id="@+id/stable_side_position_1_picture" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="9pt"
+            android:padding="20dp"
+            android:text="@string/breath_active_fragment_text"
+            android:id="@+id/breath_active" />
 
-    <TextView
-        android:id="@+id/stable_side_position_1_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="20dp"
-        android:textSize="9pt"
-        android:text="@string/breath_active_stable_side_position_1_text"
-        android:layout_toRightOf="@+id/stable_side_position_1_picture"
-        android:layout_below="@id/breath_active"/>
+        <ImageView
+            android:layout_width="400px"
+            android:layout_height="300px"
+            android:src="@drawable/seitenlage_1"
+            android:layout_below="@+id/breath_active"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/stable_side_position_1_picture" />
 
-    <ImageView
-        android:layout_width="400px"
-        android:layout_height="300px"
-        android:src="@drawable/seitenlage_2"
-        android:layout_marginLeft="20dp"
-        android:layout_below="@id/stable_side_position_1_picture"
-        android:id="@+id/stable_side_position_2_picture" />
+        <TextView
+            android:id="@+id/stable_side_position_1_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:textSize="9pt"
+            android:text="@string/breath_active_stable_side_position_1_text"
+            android:layout_toRightOf="@+id/stable_side_position_1_picture"
+            android:layout_below="@id/breath_active"/>
 
-    <TextView
-        android:id="@+id/stable_side_position_2_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="9pt"
-        android:padding="20dp"
-        android:text="@string/breath_active_stable_side_position_2_text"
-        android:layout_below="@id/stable_side_position_1_picture"
-        android:layout_toRightOf="@+id/stable_side_position_2_picture" />
+        <ImageView
+            android:layout_width="400px"
+            android:layout_height="300px"
+            android:src="@drawable/seitenlage_2"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/stable_side_position_1_picture"
+            android:id="@+id/stable_side_position_2_picture" />
 
-    <ImageView
-        android:layout_width="400px"
-        android:layout_height="300px"
-        android:src="@drawable/seitenlage_3"
-        android:layout_marginLeft="20dp"
-        android:layout_below="@id/stable_side_position_2_picture"
-        android:id="@+id/stable_side_position_3_picture" />
+        <TextView
+            android:id="@+id/stable_side_position_2_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="9pt"
+            android:padding="20dp"
+            android:text="@string/breath_active_stable_side_position_2_text"
+            android:layout_below="@id/stable_side_position_1_picture"
+            android:layout_toRightOf="@+id/stable_side_position_2_picture" />
 
-    <TextView
-        android:id="@+id/stable_side_position_3_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="9pt"
-        android:padding="20dp"
-        android:text="@string/breath_active_stable_side_position_3_text"
-        android:layout_below="@id/stable_side_position_2_picture"
-        android:layout_toRightOf="@+id/stable_side_position_3_picture" />
+        <ImageView
+            android:layout_width="400px"
+            android:layout_height="300px"
+            android:src="@drawable/seitenlage_3"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/stable_side_position_2_picture"
+            android:id="@+id/stable_side_position_3_picture" />
 
-    <ImageView
-        android:layout_width="400px"
-        android:layout_height="300px"
-        android:src="@drawable/seitenlage_4"
-        android:layout_marginLeft="20dp"
-        android:layout_below="@id/stable_side_position_3_picture"
-        android:id="@+id/stable_side_position_4_picture" />
+        <TextView
+            android:id="@+id/stable_side_position_3_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="9pt"
+            android:padding="20dp"
+            android:text="@string/breath_active_stable_side_position_3_text"
+            android:layout_below="@id/stable_side_position_2_picture"
+            android:layout_toRightOf="@+id/stable_side_position_3_picture" />
 
-    <TextView
-        android:id="@+id/stable_side_position_4_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="9pt"
-        android:padding="20dp"
-        android:text="@string/breath_active_stable_side_position_4_text"
-        android:layout_below="@id/stable_side_position_3_picture"
-        android:layout_toRightOf="@+id/stable_side_position_4_picture" />
+        <ImageView
+            android:layout_width="400px"
+            android:layout_height="300px"
+            android:src="@drawable/seitenlage_4"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/stable_side_position_3_picture"
+            android:id="@+id/stable_side_position_4_picture" />
 
-    <!--
+        <TextView
+            android:id="@+id/stable_side_position_4_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="9pt"
+            android:padding="20dp"
+            android:text="@string/breath_active_stable_side_position_4_text"
+            android:layout_below="@id/stable_side_position_3_picture"
+            android:layout_toRightOf="@+id/stable_side_position_4_picture" />
 
-    <ImageView
-        android:layout_width="300px"
-        android:layout_height="300px"
-        android:src="@drawable/seitenlage_4"
-        android:layout_below="@+id/stable_side_position_3_picture"
-        android:id="@+id/stable_side_position_4_picture" />
-
-    <TextView
-        android:id="@+id/stable_side_position_4_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/breath_active_stable_side_position_4_text"
-        android:layout_alignBottom="@+id/stable_side_position_4_picture"
-        android:layout_toRightOf="@+id/stable_side_position_4_picture"
-        android:layout_toEndOf="@+id/stable_side_position_4_picture" />
-
--->
-
-</RelativeLayout>
+    </RelativeLayout>
 </ScrollView>

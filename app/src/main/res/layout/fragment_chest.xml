@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Enable scrolling -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent" android:id="@+id/chest_scroll">
+
+    <!-- Content of ChestFragment -->
     <LinearLayout
         android:layout_width="match_parent" android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <!-- Important information -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -13,13 +17,14 @@
             android:text="@string/chest_fragment_text"
             android:id="@+id/chest" />
 
+        <!-- Title of list entry (closed by default)-->
         <TextView
             android:id="@+id/chest_title_1"
             style="@style/ListContents"
             android:tag="chest1"
             android:text="@string/chest_title_1"
             android:onClick="expandTitle"/>
-
+        <!-- Content of list entry (invisible by default)-->
         <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

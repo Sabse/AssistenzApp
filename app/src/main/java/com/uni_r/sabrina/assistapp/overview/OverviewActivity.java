@@ -1,28 +1,21 @@
 package com.uni_r.sabrina.assistapp.overview;
 
 import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.RelativeLayout;
-import android.widget.ScrollView;
-import android.widget.TextView;
 
 import com.uni_r.sabrina.assistapp.R;
 import com.uni_r.sabrina.assistapp.SlidingTabLayout;
 import com.uni_r.sabrina.assistapp.main.EmergencyCallActivity;
 import com.uni_r.sabrina.assistapp.responseless.ResponselessActivity;
 
-import org.apache.http.conn.ConnectionReleaseTrigger;
-
-
-
 /**
  * Created by Sabse on 24.05.2015.
+ * This class contains all buttons related to the overview topics (chest, head, injuries, stomach).
+ * It sets up all the fragments per topic and embeds the emergency call.
  */
 public class OverviewActivity extends EmergencyCallActivity{
 
@@ -44,19 +37,18 @@ public class OverviewActivity extends EmergencyCallActivity{
         Bundle b = i.getExtras();
         fragmentValue = (int)b.get("ButtonValue");
 
-
         // Creating The ViewPagerAdapter and Passing Fragment Manager, Titles fot the Tabs and Number Of Tabs.
         adapter =  new OverviewViewPagerAdapter(getSupportFragmentManager(),Titles,Numboftabs);
 
-        // Assigning ViewPager View and setting the adapter
+        // Assigning ViewPager View and setting the adapter.
         pager = (ViewPager) findViewById(R.id.overview_pager);
         pager.setAdapter(adapter);
 
-        // Assiging the Sliding Tab Layout View
+        // Assigning the Sliding Tab Layout View.
         tabs = (SlidingTabLayout) findViewById(R.id.tabs);
-        tabs.setDistributeEvenly(true); // To make the Tabs Fixed set this true, This makes the tabs Space Evenly in Available width
+        tabs.setDistributeEvenly(true); // To make the Tabs Fixed set this true, This makes the tabs Space Evenly in Available width.
 
-        // Setting Custom Color for the Scroll bar indicator of the Tab View
+        // Setting Custom Color for the Scroll bar indicator of the Tab View.
         tabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
             @Override
             public int getIndicatorColor(int position) {
@@ -64,19 +56,19 @@ public class OverviewActivity extends EmergencyCallActivity{
             }
         });
 
-        // Setting the ViewPager For the SlidingTabsLayout
+        // Setting the ViewPager for the SlidingTabsLayout.
         tabs.setViewPager(pager);
         pager.setCurrentItem(fragmentValue);
-
-
     }
 
     public void startResponselessActivity(View v){
+        // If responsless button in the footer is touched, open ResponslessActivity.
         Intent intent = new Intent(OverviewActivity.this, ResponselessActivity.class);
         startActivity(intent);
     }
 
     private final void focusOnView(final View v, final View v2){
+        // Center actual content of open list entry in the screen.
         new Handler().post(new Runnable() {
             @Override
             public void run() {
@@ -86,10 +78,8 @@ public class OverviewActivity extends EmergencyCallActivity{
     }
 
     public void expandTitle(View v){
-
+        // Depending on the list entry that is touched, show content and switch color.
         switch (v.getTag().toString()){
-
-
             case "injury2": contentLayout = (RelativeLayout) findViewById(R.id.injury_title_2_content);
                 contentLayout.setVisibility(contentLayout.isShown() ? View.GONE : View.VISIBLE);
                 if(contentLayout.isShown()){
@@ -230,9 +220,6 @@ public class OverviewActivity extends EmergencyCallActivity{
                 break;
 
             default: break;
-
         }
-
     }
-
 }

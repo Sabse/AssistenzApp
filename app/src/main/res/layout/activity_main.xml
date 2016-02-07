@@ -5,6 +5,7 @@
     tools:context=".MainActivity"
     android:id="@+id/main_layout">
 
+    <!-- Setup button layout for buttons in MainActivity -->
     <ImageButton
         android:id="@+id/responseless_button"
         android:layout_width="wrap_content"
